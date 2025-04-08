@@ -15,19 +15,10 @@ def caching_fibonacci():
 
         return cache[n]
 
-    while True:
-        user_input = input("Enter a number: ")
+    return fibonacci
 
-        if user_input in ["close", "exit"]:
-            print("Good bye!")
-            break
-        else:
-            print('-cache before-', cache)
-            result = fibonacci(int(user_input))
-            print('-cache AFTER-', cache)
-            print(f'The number "{user_input}" from Fibonacci row is "{result}"')
+fib = caching_fibonacci()
 
-caching_fibonacci()
-
-
+print(fib(10))
+print(fib(15))
 
