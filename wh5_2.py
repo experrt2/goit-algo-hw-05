@@ -3,7 +3,7 @@ from typing import Callable
 
 
 def generator_numbers(text):
-    numbers = re.findall(r"[-+]?\d*\.\d+|\d+", text)
+    numbers = re.findall(r"\s([-+]?\d*\.\d+|\d+)\s", text)
 
     for i in numbers:
         yield i
